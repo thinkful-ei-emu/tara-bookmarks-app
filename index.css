@@ -1,0 +1,76 @@
+body {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+h1, h3{
+  font-family: "Roboto", sans-serif;
+}
+.collapsible {
+  width: 100%;
+}
+
+.fa-star {
+  color: orange;
+}
+
+form {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+h3 {
+  margin-top: 0px;
+}
+
+#search-controls {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+#search-controls label {
+  width: 125px;
+}
+
+label {
+  font-size: 16px;
+  display: inline-block;
+  width: 100px;
+  height: 25px;
+}
+
+ul{
+  padding: 0px;
+  list-style: none;
+}
+
+li {
+  padding: 10px;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+.bookmark-entry {
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+.delete {
+  display: inline;
+}
+
+.edit {
+  display: inline;
+}
