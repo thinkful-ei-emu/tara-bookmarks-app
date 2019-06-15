@@ -1,4 +1,5 @@
 'use strict';
+/*global store, api, bookmarks*/
 
 $(document).ready(function() {
   api.getItems()

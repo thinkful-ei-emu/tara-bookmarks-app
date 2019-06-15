@@ -47,11 +47,22 @@ const api = (function() {
     });
   };
 
+  const modifyEntry = function(id, newData) {
+    return listApiFetch(`${BASE_URL}${id}`, {
+      method: 'PATCH',
+      headers: new Headers({
+        'Content-Type': 'application/json'
+      }),
+      body: newData
+    });
+  };
+
   return {
     createEntry,
     listApiFetch,
     getItems,
-    deleteEntry
+    deleteEntry,
+    modifyEntry
   };
 
 })();

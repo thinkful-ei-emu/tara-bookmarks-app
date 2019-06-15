@@ -7,51 +7,60 @@
   <script src="https://kit.fontawesome.com/c671bbc999.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="grid.css">
   <title>Document</title>
 </head>
+
 <body>
-  <header>
+  <header role="banner">
     <h1>My Bookmarks</h1>
   </header>
-  <section>
-    <form id="add-bookmark">
-      <div class="hidden collapsible-add-form">
-          <div>
-              <label for="add-bookmark-title">Title:</label>
-              <input type="text" name="title" id="add-bookmark-title">
-            </div>
+
+  <main role="main">
+    <section class="controls-section">
+      <form id="add-bookmark">
+        <div class="hidden collapsible-add-form">
             <div>
-              <label for="add-bookmark-url">URL:</label>
-              <input type="text" name="url" id="add-bookmark-url">
-            </div>
-            <div>
-              <label for="add-bookmark-description">Description:</label>
-              <input type="text" name="desc" id="add-bookmark-description">
-            </div>
-            <div>
-              <label for="add-bookmark-rating">Rating:</label>
-              <input type="number" name="rating" id="add-bookmark-rating">
-            </div>
-            <button type="submit">save</button>
-      </div>
-      <button class="js-button">Add new bookmark</button>
-    </form>
-    <form id="search-controls">
-      <label for="minimum-rating">Filter by rating:</label>
-      <select id="minimum-rating" name="minimum-rating">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-      <button type="submit" id="search-submit">Filter</button>
-    </form>
-  </section>
-  <section class="list-section">
-    <ul id="bookmarks-list">
-    </ul>
-  </section>
+                <label for="add-bookmark-title">Title:</label>
+                <input type="text" name="title" id="add-bookmark-title" aria-describedby="my-error-message" required>
+              </div>
+              <div>
+                <label for="add-bookmark-url">URL:</label>
+                <input type="text" name="url" id="add-bookmark-url" aria-describedby="my-error-message" required>
+              </div>
+              <div>
+                <label for="add-bookmark-description">Description:</label>
+                <input type="text" name="desc" id="add-bookmark-description">
+              </div>
+              <div>
+                <label for="add-bookmark-rating">Rating:</label>
+                <input type="number" name="rating" id="add-bookmark-rating">
+              </div>
+              <button type="submit">Save</button>
+              <button type="reset" class="cancel">Cancel</button>
+        </div>
+        <button class="js-button">Add new bookmark</button>
+      </form>
+      <form id="search-controls">
+        <label for="minimum-rating">Filter by minimum rating:</label>
+        <select id="minimum-rating" name="filter">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <button type="submit" id="search-submit">Filter</button>
+        <button type="reset" class="show-all">Show all</button>
+      </form>
+    </section>
+    <section class="list-section">
+      <ul id="bookmarks-list">
+      </ul>
+    </section>
+  </main>
+
+  <footer>@T.J. Patel</footer>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cuid/1.3.8/browser-cuid.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="scripts/api.js"></script>
